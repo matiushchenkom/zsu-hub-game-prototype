@@ -125,18 +125,18 @@ A central game-management system coordinates scene transitions, save data, playe
 </table>
 ---
 
-## Selected Code Samples
+### Selected Code Samples
 
-Only selected original C# scripts are included in this public repository.
+Only selected original C# scripts are included in this public repository. Each sample demonstrates one of the project’s core gameplay or architectural systems.
 
-| Area | Code sample | Demonstrates |
+| Area | Code Sample | What It Demonstrates |
 |---|---|---|
-| Core architecture | [`GameManager.cs`](CodeSamples/Architecture/GameManager.cs) | Scene transitions, save data, runtime state, and restart logic |
-| Player control | [`MovementStateManager.cs`](CodeSamples/Player/MovementStateManager.cs) | Movement, jumping, slopes, animations, and combat-state integration |
-| Inventory | [`InventoryManager.cs`](CodeSamples/Player/InventoryManager.cs) | Inventory slots, equipped items, ammunition, UI, and saved state |
-| Drone gameplay | [`DroneController.cs`](CodeSamples/Drone/DroneController.cs) | Drone movement, input handling, scanning, and mine detection |
-| Enemy AI | [`RPGPigAI.cs`](CodeSamples/EnemyAI/RPGPigAI.cs) | Navigation, target selection, attacks, and retreat behaviour |
-| Vehicle interaction | [`TankEnterInteraction.cs`](CodeSamples/Vehicle/TankEnterInteraction.cs) | Tank entry, camera switching, input maps, and UI state |
+| Core architecture | [`GameManager.cs`](CodeSamples/Architecture/GameManager.cs) | Scene transitions, save data, runtime state persistence, level restart logic, and tank transportation |
+| Player control | [`MovementStateManager.cs`](CodeSamples/Player/MovementStateManager.cs) | Camera-relative movement, jumping, slope handling, animation states, and combat-mode integration |
+| Inventory and combat | [`InventoryManager.cs`](CodeSamples/Player/InventoryManager.cs) | Inventory slots, equipped items, ammunition, UI state, and save-data integration |
+| Drone gameplay | [`DroneController.cs`](CodeSamples/Drone/DroneController.cs) | Drone movement, input handling, ground scanning, and mine detection |
+| Enemy AI | [`RPGPigAI.cs`](CodeSamples/EnemyAI/RPGPigAI.cs) | Navigation, target selection, attack-distance management, RPG attacks, and retreat behaviour |
+| Vehicle system | [`TankEnterInteraction.cs`](CodeSamples/Vehicle/TankEnterInteraction.cs) | Tank entry and exit, camera switching, input-map changes, UI switching, and player-state control |
 
 ---
 
