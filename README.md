@@ -11,9 +11,9 @@
 </p>
 
 <p align="center">
-  <a href="https://youtu.be/GrSy26wlECw"><strong>Short Gameplay Video</strong></a>
+  <a href="https://drive.google.com/file/d/1_dromuuYj7iwP7q2dJrvS_o2SimsWA1q/view?usp=drive_link"><strong>Short Gameplay Video</strong></a>
   ·
-  <a href="https://youtu.be/8ZhkeuBTKg8"><strong>Longer Gameplay Video</strong></a>
+  <a href="https://drive.google.com/file/d/1IebJtHD5IYEwX-Dob3-MZhcYTNypceP3/view?usp=drive_linkhttps://drive.google.com/file/d/1IebJtHD5IYEwX-Dob3-MZhcYTNypceP3/view?usp=drive_link"><strong>Longer Gameplay Video</strong></a>
   ·
   <a href="https://www.artstation.com/marharyta-matiushchenko"><strong>ArtStation</strong></a>
   ·
@@ -171,7 +171,7 @@ I independently worked on:
 
 ## Links
 
-- **Gameplay Video:** [Watch the gameplay](https://youtu.be/GrSy26wlECw)
+- **Gameplay Video:** [Watch the gameplay]([https://youtu.be/GrSy26wlECw](https://drive.google.com/file/d/1_dromuuYj7iwP7q2dJrvS_o2SimsWA1q/view?usp=drive_link)
 - **ArtStation:** [View the full project](https://www.artstation.com/marharyta-matiushchenko)
 - **LinkedIn:** [View my profile](https://www.linkedin.com/in/marharyta-matiushchenko)
 
