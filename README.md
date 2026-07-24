@@ -93,7 +93,7 @@ Tank control, vehicle combat, RPG attacks, vehicle damage, repair supplies, and 
 Detailed explanations of the project’s main systems are available on separate documentation pages:
 
 - [Main Character — Shaiba](Documentation/Shaiba.md)
-- [Drone and Minefield System](Documentation/Drone-System.md)
+- [Drone and Minefield System](Documentation/Drone-and-Minefield.md)
 - [Enemy AI and Combat](Documentation/Enemy-AI.md)
 - [Tank and Vehicle System](Documentation/Tank-System.md)
 - [UI, Saving and Game States](Documentation/UI-and-Game-States.md)
