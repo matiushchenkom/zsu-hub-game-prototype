@@ -127,6 +127,72 @@ The prefab hierarchy also contains:
 
 ---
 
+## Input Configuration
+
+Shaiba uses the active `Player` input map for movement and jumping. Inventory and combat commands are handled through direct `Keyboard.current` and `Mouse.current` checks in `InventoryManager`.
+
+| Default binding | Input action / source | Behaviour |
+|---|---|---|
+| `W / A / S / D` | `Move` | Camera-relative movement |
+| `Left Shift` | Direct keyboard check | Run |
+| `Space` | `Jump` | Jump when grounded and the surface angle is valid |
+| `Mouse movement` | Cinemachine camera input | Rotate the third-person camera and update the combat aim direction |
+| `1` | Direct keyboard check | Select or deselect slot 1 — Vulkan-M |
+| `2` | Direct keyboard check | Select or deselect inventory slot 2 |
+| `3` | Direct keyboard check | Select or deselect inventory slot 3 |
+| `E` | `Interact` / direct keyboard check | Pick up a nearby item or interact with a contextual object |
+| `G` | Direct keyboard check | Drop the selected item from slot 2 or 3 |
+| `Left Mouse Button` — hold | Direct mouse check | Fire the Vulkan-M while slot 1 is active |
+| `Left Mouse Button` — press | Direct mouse check | Use the selected item from slot 2 or 3; install the battery when accepted by the drone terminal |
+| `R` | Direct keyboard check | Reload the Vulkan-M |
+| `Esc` | Direct keyboard check | Open or close the pause menu |
+
+Movement is calculated from the Cinemachine camera’s forward and right directions, so the controls remain relative to the current screen view rather than the scene’s global axes.
+
+---
+
+## Gameplay State System
+
+One of the character’s defining features is the automatic relationship between the selected inventory slot and Shaiba’s movement and animation state.
+
+| State | Posture | Behaviour |
+|---|---|---|
+| Exploration | Quadrupedal | Free camera-relative movement, running, jumping, and visual alignment to terrain slopes |
+| Weapon equipped | Bipedal combat stance | Camera-facing aiming, turn-in-place animation, reduced combat movement speed, firing, and reloading |
+| Item equipped | Bipedal item stance | Item is attached to the hand, rigid weapon aiming is disabled, and the character can rotate freely while using the item |
+| Vehicle mode | Hidden / transported with tank | Character control and HUD are switched while the tank becomes the active gameplay object |
+
+### Exploration State
+
+During normal exploration, Shaiba moves on four legs. Movement is calculated relative to the active third-person camera, allowing the player to move naturally through the environment.
+
+The movement system includes:
+
+- separate walking and running speeds;
+- acceleration and smooth deceleration;
+- camera-relative direction calculation;
+- smoothed character rotation;
+- ground detection and slope validation;
+- movement projected along the surface;
+- jumping with a short input tolerance;
+- enhanced falling and a separate landing trigger;
+- reduced air control;
+- visual slope alignment while the physical body remains stable.
+
+Slope alignment is disabled during combat so the upright pose is not tilted by uneven terrain.
+
+### Combat State
+
+Selecting the first inventory slot equips Shaiba’s **Vulkan-M** weapon and activates the bipedal combat state. The character then rotates toward the camera’s aiming direction instead of only following the movement vector.
+
+A turn-in-place system detects camera rotation while the character is standing still and plays a left or right turning animation. This keeps the weapon orientation visually synchronized with the player’s aim.
+
+### Item State
+
+Selecting an item from slot 2 or slot 3 also moves Shaiba into an upright stance. Unlike the weapon state, the aiming constraint is disabled so the character is not locked toward a combat target. This supports actions such as carrying a battery or consuming food while retaining free rotation.
+
+---
+
 ## Gameplay State System
 
 One of the character’s defining features is the automatic relationship between the selected inventory slot and Shaiba’s movement and animation state.
