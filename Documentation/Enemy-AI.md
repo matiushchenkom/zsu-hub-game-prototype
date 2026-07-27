@@ -321,6 +321,11 @@ Each `PigAI` registers itself with the group when enabled and unregisters when d
 
 The source enemy sends the shared target to the group. Every other valid member receives the target and immediately transitions into aggressive pursuit.
 
+<p align="center">
+  <img src="../Media/Enemies/enemy-pig-2-groups.png"
+       width="100%">
+</p>
+
 ## Reaction, Chase, and Search
 
 When Shaiba is first detected, the enemy enters a short `Reacting` state instead of firing immediately. During this delay it:
